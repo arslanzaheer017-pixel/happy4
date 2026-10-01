@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Teacher's Day, Miss Zainab</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Dancing+Script:wght@600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--rose:#cf4a85;--ink:#3a2740;--soft:#7a6a80;--cream:#fffaf6;--lav:#ece6ff;--blush:#ffdfeb}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,"Segoe UI",sans-serif;color:var(--ink);background:var(--cream)}
+section{min-height:100vh;display:grid;place-items:center;align-content:center;padding:70px 18px;position:relative;overflow:hidden;text-align:center;
+ background:radial-gradient(circle at 8% 12%,var(--blush),transparent 45%),radial-gradient(circle at 94% 18%,var(--lav),transparent 45%),var(--cream)}
+.tag{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--rose);font-weight:500}
+h1,h2{font-family:"Playfair Display",Georgia,serif;line-height:1.1}
+.script{font-family:"Dancing Script",cursive;color:var(--rose)}
+/* intro */
+#intro h1{font-size:clamp(46px,14vw,88px);margin:14px 0 8px;position:relative;z-index:1}
+#intro p{color:var(--soft);font-size:14px;position:relative;z-index:1}
+.ribbon{position:absolute;left:0;right:0;top:56%;height:58px;border:0;cursor:pointer;color:#fff;font:600 15px Poppins,sans-serif;letter-spacing:.04em;
+ background:linear-gradient(90deg,#f7a1c4,#d9508c,#f7a1c4);box-shadow:0 10px 28px rgba(207,74,133,.35);transition:transform .8s ease,opacity .8s ease;z-index:2}
+.ribbon:hover{filter:brightness(1.06)}
+#intro.open .ribbon{transform:scaleY(0);opacity:0;pointer-events:none}
+.fly{position:fixed;bottom:-40px;pointer-events:none;z-index:9;animation:rise 3.2s ease-in forwards}
+@keyframes rise{to{transform:translateY(-115vh) rotate(40deg);opacity:0}}
+/* hero */
+.card{background:rgba(255,255,255,.88);border-radius:34px;box-shadow:0 30px 80px rgba(207,74,133,.16);position:relative;z-index:2}
+#hero .card{width:min(520px,100%);padding:44px 26px 40px}
+.badge{width:78px;height:78px;margin:-84px auto 18px;border-radius:50%;background:#fff;border:4px solid #f6b5cf;display:grid;place-items:center;font-size:36px;box-shadow:0 10px 26px rgba(207,74,133,.25)}
+#hero h1{font-size:clamp(38px,11vw,60px);margin:12px 0 6px;background:linear-gradient(135deg,#d34f8a,#a24cb5);-webkit-background-clip:text;background-clip:text;color:transparent}
+#hero .script{font-size:clamp(24px,7vw,32px)}
+#hero .role{margin:14px 0 6px;font-weight:500}
+#hero .sub{color:var(--soft);font-weight:300;font-size:14px;line-height:1.7}
+.pill{position:absolute;z-index:1;padding:8px 14px;border-radius:12px;font-size:12px;font-weight:600;color:#fff;box-shadow:0 10px 24px rgba(0,0,0,.12);animation:bob 4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-12px) rotate(3deg)}}
+/* letter */
+h2{font-size:clamp(32px,8vw,48px);margin:10px 0 6px}
+.env{position:relative;width:min(340px,86vw);height:220px;margin:190px auto 0;cursor:pointer}
+.env>*{position:absolute;left:0;right:0}
+.eb{inset:0;background:#f0a0c0;border-radius:10px;box-shadow:0 24px 50px rgba(207,74,133,.28)}
+.flap{top:0;height:115px;background:#e98bb2;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .7s ease;z-index:3;border-radius:10px 10px 0 0}
+.front{inset:0;background:#f8bcd4;clip-path:polygon(0 45%,50% 70%,100% 45%,100% 100%,0 100%);z-index:2;border-radius:0 0 10px 10px}
+.letter{left:6%;right:6%;top:30px;height:150px;background:#fffdf7;border-radius:8px;padding:16px 18px;z-index:1;text-align:left;overflow:hidden;
+ box-shadow:0 6px 18px rgba(0,0,0,.1);transition:transform .9s ease .35s,height .9s ease .35s}
+.letter .script{font-size:24px;display:block;margin-bottom:4px}
+.letter p{font-size:13px;line-height:1.55;color:#4d3d52;margin-top:5px}
+.env.open .flap{transform:rotateX(180deg);z-index:0}
+.env.open .letter{transform:translateY(-175px);height:238px}
+.hint{margin-top:26px;color:var(--soft);font-size:13px}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;width:min(880px,100%);margin-top:34px}
+.mini{padding:30px 20px;border-radius:24px;background:#fff;box-shadow:0 14px 40px rgba(120,80,160,.1)}
+.mini div{font-size:34px}
+.mini h3{font-size:18px;margin:10px 0 6px}
+.mini p{font-size:13px;line-height:1.6;color:var(--soft);font-weight:300}
+/* end */
+#end .card{width:min(560px,100%);padding:44px 26px}
+#end h2{font-size:clamp(30px,8vw,44px)}
+#end p.msg{color:var(--soft);font-size:14px;line-height:1.8;margin:14px 0 18px}
+#end .script{font-size:30px}
+.from{margin-top:20px;font-weight:600}
+.from small{display:block;font-weight:300;color:var(--soft);font-size:13px;margin-top:2px}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.pill{animation:none}.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<section id="intro">
+  <span class="tag">A little surprise awaits</span>
+  <h1>For Someone Special</h1>
+  <p>Behind this ribbon is a message for a wonderful teacher</p>
+  <button class="ribbon" id="rib">Tap the ribbon to reveal 🎀</button>
+</section>
+
+<section id="hero">
+  <span class="pill" style="top:16%;left:6%;background:#e86aa0">💻 Code</span>
+  <span class="pill" style="top:24%;right:6%;background:#8b6fd6;animation-delay:1s">🌟 Inspire</span>
+  <span class="pill" style="bottom:14%;left:9%;background:#4fb8a0;animation-delay:2s">📚 Learn</span>
+  <div class="card rv">
+    <div class="badge">🎓</div>
+    <span class="tag">A day to celebrate you</span>
+    <h1>Happy Teacher's Day</h1>
+    <div class="script">Dear Miss Zainab</div>
+    <p class="role">Our wonderful Computer Teacher</p>
+    <p class="sub">Thank you for every lesson, every line of code and every smile.</p>
+  </div>
+</section>
+
+<section id="letter">
+  <span class="tag">A message from the heart</span>
+  <h2>A Little Letter 💌</h2>
+  <div class="env" id="env">
+    <div class="eb"></div>
+    <div class="flap"></div>
+    <div class="letter">
+      <span class="script">Dear Miss Zainab,</span>
+      <p>Thank you for turning every click into curiosity.</p>
+      <p>You taught us that code is just another way to dream.</p>
+      <p>Your patience made every error a lesson, not a mistake.</p>
+      <p>We are so lucky to have you as our teacher. 💖</p>
+    </div>
+    <div class="front"></div>
+  </div>
+  <p class="hint">Tap the envelope to open or close it</p>
+</section>
+
+<section id="inspire">
+  <span class="tag">More than a teacher</span>
+  <h2>You Inspire Us 💖</h2>
+  <div class="grid">
+    <div class="mini rv"><div>💻</div><h3>You Teach</h3><p>You turn difficult computer lessons into moments of discovery.</p></div>
+    <div class="mini rv" style="transition-delay:.15s"><div>🌱</div><h3>You Inspire</h3><p>You help us dream bigger and believe that we can achieve it.</p></div>
+    <div class="mini rv" style="transition-delay:.3s"><div>💖</div><h3>You Care</h3><p>Your kindness and support make every student feel valued.</p></div>
+  </div>
+</section>
+
+<section id="end">
+  <div class="card rv">
+    <h2>You Made A Difference.</h2>
+    <p class="msg">A teacher's influence stays with a student long after the class is over. Your lessons may end with the bell, but their impact never does.</p>
+    <div class="script">With Gratitude &amp; Love 💖</div>
+    <p class="from">From Arslan Zaheer<small>(Computer Science Student)</small></p>
+  </div>
+</section>
+
+<script>
+const $=s=>document.querySelector(s);
+function burst(){
+  const icons=['💖','✨','🌸','💻','⭐'];
+  for(let i=0;i<24;i++){
+    const e=document.createElement('span');
+    e.className='fly';e.textContent=icons[i%5];
+    e.style.left=Math.random()*96+'vw';
+    e.style.animationDelay=Math.random()*.7+'s';
+    e.style.fontSize=(14+Math.random()*18)+'px';
+    document.body.appendChild(e);
+    setTimeout(()=>e.remove(),4200);
+  }
+}
+$('#rib').addEventListener('click',()=>{
+  $('#intro').classList.add('open');burst();
+  setTimeout(()=>$('#hero').scrollIntoView({behavior:'smooth'}),900);
+});
+const env=$('#env');
+env.addEventListener('click',()=>env.classList.toggle('open'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in')}}),{threshold:.25});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){setTimeout(()=>env.classList.add('open'),600);o.disconnect()}},{threshold:.7}).observe(env);
+</script>
+</body>
+</html>
